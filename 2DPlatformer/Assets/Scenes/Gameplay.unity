@@ -776,16 +776,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2691936000145409101, guid: f21d32d0b926c004fa5c5d4d61a40051,
-        type: 3}
-      propertyPath: _JumpSpeed
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2691936000145409101, guid: f21d32d0b926c004fa5c5d4d61a40051,
-        type: 3}
-      propertyPath: _LayerMask.m_Bits
-      value: 512
-      objectReference: {fileID: 0}
     - target: {fileID: 2691936001504259856, guid: f21d32d0b926c004fa5c5d4d61a40051,
         type: 3}
       propertyPath: m_Name
@@ -844,11 +834,6 @@ PrefabInstance:
     - target: {fileID: 2691936001504259860, guid: f21d32d0b926c004fa5c5d4d61a40051,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2691936001504259861, guid: f21d32d0b926c004fa5c5d4d61a40051,
-        type: 3}
-      propertyPath: m_FlipX
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

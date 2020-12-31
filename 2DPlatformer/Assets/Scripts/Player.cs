@@ -4,6 +4,7 @@ public class Player : MonoBehaviour
 {
     private Rigidbody2D _Rigidbody;
     private SpriteRenderer _SpriteRenderer;
+    private Animator _Animator;
     private float _XInput;
     private bool _IsJumping;
     private bool _IsGrounded;
@@ -19,17 +20,25 @@ public class Player : MonoBehaviour
     private float _GroundCheckOffset = 0.15f;
     [SerializeField]
     private LayerMask _LayerMask;
+    [SerializeField]
+    private string _XInputName = "XInput";
+    [SerializeField]
+    private string _IsGroundedName = "IsGrounded";
+    [SerializeField]
+    private string _JumpName = "Jump";
 
     private void Start()
     {
         _Rigidbody = GetComponent<Rigidbody2D>();
         _SpriteRenderer = GetComponent<SpriteRenderer>();
+        _Animator = GetComponent<Animator>();
     }
 
     private void Update()
     {
         ReadInputs();
         HandleSprite();
+        HandleAnimations();
     }
 
 
@@ -70,6 +79,24 @@ public class Player : MonoBehaviour
         _SpriteRenderer.flipX = _IsFacingLeft;
     }
     
+    private void HandleAnimations()
+    {
+        var xInput = _XInput;
+
+        if (xInput < 0)
+        {
+            xInput = xInput * -1;
+        }
+
+        _Animator.SetFloat(_XInputName, xInput);
+        _Animator.SetBool(_IsGroundedName, _IsGrounded);
+
+        if (_IsJumping == true)
+        {
+            _Animator.SetTrigger(_JumpName);
+        }
+    }
+
     private void MovementPhysics()
     {
         //var compiles faster than types and will auto decide the variable type

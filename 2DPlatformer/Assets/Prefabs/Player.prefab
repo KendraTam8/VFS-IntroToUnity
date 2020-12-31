@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2691936001504259860}
   - component: {fileID: 2691936001504259861}
+  - component: {fileID: 8408497642777858312}
   - component: {fileID: 2691936001504259862}
   - component: {fileID: 2691936001504259863}
   - component: {fileID: 2691936000145409101}
@@ -85,6 +86,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &8408497642777858312
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2691936001504259856}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bb574f149dca7f3409ce31228635de0a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!70 &2691936001504259862
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -135,4 +155,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _MoveSpeed: 5
-  _JumpSpeed: 10
+  _JumpSpeed: 6
+  _GroundCheckDistance: 0.25
+  _GroundCheckOffset: 0.15
+  _LayerMask:
+    serializedVersion: 2
+    m_Bits: 512
